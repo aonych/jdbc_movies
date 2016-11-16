@@ -33,7 +33,7 @@ public class Movie {
 	public void setProduction(String production) {
 		this.production = production;
 	}
-	public long getYear() {
+	public int getYear() {
 		return year;
 	}
 	public void setYear(int year) {

@@ -7,7 +7,7 @@ public class Character {
 	private String name;
 	private String quality;
 	private String type;
-	private long movieFK;
+	private int movieFK;
 	
 	public long getId() {
 		return id;
@@ -33,10 +33,10 @@ public class Character {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public long getMovieFK() {
+	public int getMovieFK() {
 		return movieFK;
 	}
-	public void setMovieFK(long movieFK) {
+	public void setMovieFK(int movieFK) {
 		this.movieFK = movieFK;
 	}
 	

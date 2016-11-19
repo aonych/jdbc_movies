@@ -9,6 +9,17 @@ public class Movie {
 	private String production;
 	private int year;
 	
+	public Movie() {
+	}
+	
+	public Movie(String title, String country, String production, int year) {
+		super();
+		this.title = title;
+		this.country = country;
+		this.production = production;
+		this.year = year;
+	}
+	
 	public long getId() {
 		return id;
 	}

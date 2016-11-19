@@ -26,7 +26,7 @@ public class MovieManager {
 	private PreparedStatement editMovieStmt;
 	private PreparedStatement deleteAllMoviesStmt;
 	private PreparedStatement getAllMoviesStmt;
-	private PreparedStatement getMovieStmt;
+	private static PreparedStatement getMovieStmt;
 	
 	private Statement statement;
 	
@@ -72,7 +72,7 @@ public class MovieManager {
 	}
 
 	
-	Connection getConnection() {
+	public Connection getConnection() {
 		return connection;
 	}
 	
@@ -124,7 +124,7 @@ public class MovieManager {
 		return count;
 	}
 	
-	void deleteAllMovies() {
+	public void deleteAllMovies() {
 		try {
 			deleteAllMoviesStmt.executeUpdate();
 		} catch (SQLException e) {
@@ -154,7 +154,7 @@ public class MovieManager {
 		return movies;
 	}
 	
-	public Movie getMovie(long id) {
+	public static Movie getMovie(long id) {
 		Movie m = new Movie();
 
 		try {

@@ -9,6 +9,17 @@ public class Character {
 	private String type;
 	private int movieFK;
 	
+	public Character() {
+	}
+	
+	public Character(String name, String quality, String type, int movieFK) {
+		super();
+		this.name = name;
+		this.quality = quality;
+		this.type = type;
+		this.movieFK = movieFK;
+	}
+	
 	public long getId() {
 		return id;
 	}

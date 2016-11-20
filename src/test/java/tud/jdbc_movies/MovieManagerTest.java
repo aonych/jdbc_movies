@@ -104,7 +104,6 @@ public class MovieManagerTest {
 		assertEquals(1,movieManager.addMovie(movie2));
 		
 		List<Movie> movies = movieManager.getAllMovies();		
-		movies = movieManager.getAllMovies();
 		
 		Movie movieRetrieved = movies.get(0);
 		assertEquals(TITLE_1, movieRetrieved.getTitle());

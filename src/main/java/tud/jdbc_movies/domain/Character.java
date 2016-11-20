@@ -3,7 +3,7 @@ package tud.jdbc_movies.domain;
 
 public class Character {
 
-	private long id;
+	private int id;
 	private String name;
 	private String quality;
 	private String type;
@@ -20,10 +20,10 @@ public class Character {
 		this.movieFK = movieFK;
 	}
 	
-	public long getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {

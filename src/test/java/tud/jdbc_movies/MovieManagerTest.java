@@ -46,6 +46,7 @@ public class MovieManagerTest {
 		
 	}
 	
+	
 	@Test
 	public void checkDelete(){
 		
@@ -57,7 +58,7 @@ public class MovieManagerTest {
 		assertEquals(1,movieManager.addMovie(movie2));
 		
 		List<Movie> movies = movieManager.getAllMovies();
-		long deletedID = movies.get(0).getId();
+		int deletedID = movies.get(0).getId();
 		int delete = movieManager.deleteMovie(deletedID);
 		assertEquals(1, delete);
 		
@@ -139,6 +140,24 @@ public class MovieManagerTest {
 		assertEquals(YEAR_2, movieRetrieved.getYear());
 	}
 	
+	
+	
+	@Test
+	public void checkNotExist(){
+
+		Movie movie = new Movie(TITLE_1, COUNTRY_1,PRODUCTION_1,YEAR_1);
+		
+		movieManager.deleteAllMovies();
+		assertEquals(1,movieManager.addMovie(movie));	
+		
+		Movie getMovie = movieManager.getMovie(19);
+		
+		assertEquals(null, getMovie.getTitle());
+		assertEquals(null, getMovie.getCountry());
+		assertEquals(null, getMovie.getProduction());
+		assertEquals(0, getMovie.getYear());
+		
+	} 
 	
 	
 }
